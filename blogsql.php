@@ -2,7 +2,7 @@
 include 'blog.php';  
   
 $connection = mysql_connect('localhost', 'username', 'password') or die ("<p class='error'>Sorry, we were unable to connect to the database server.</p>");  
-$database = "myBlog";  
+$database = "blog_post";  
 mysql_select_db($database, $connection) or die ("<p class='error'>Sorry, we were unable to connect to the database.</p>");  
   
 function GetBlogPosts($inId=null, $inTagId =null)  
