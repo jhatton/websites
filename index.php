@@ -10,7 +10,7 @@
     <h1>My Simple Blog</h1>  
     <div id="blogPosts">  
   <?php  
-	  	include 'blogsql.php';  
+	  	include 'blog.php';  
 	  	$blogPosts = GetBlogPosts();
 		foreach ($blogPosts as $post)  
 {  
