@@ -8,13 +8,13 @@
 </head>
 
  <body>
- <!--------- main title --------->
+ <!--main title-->
  <div id="main">  
    <h1>Welcome to myBlog</h1>
    
    <p class="desc">Login and create a blog of anything that you want to blog about. The site is free and open to everyone</p>
     
-     <!---------- Login form --------->
+     <!-- Login form -->
     <form name="form1" method="post" action="">
       <p>Please Login to begin blogging!</p>
       <p id="user"> 
@@ -23,38 +23,39 @@
       </p>
       <p id="class">
         <label>password
-          <input type="text" name="password" id="password">
+          <input type="text" name="password1" id="password1">
           <br>
           <input type="submit" name="LOGIN" id="LOGIN" align="right" value="LOGIN">
-          <br>
-           <br>
+          <br> <br>
+          
         </label>
       </p>
     </form>
-     <!---------- New Users ----------->
+     <!-- New Users -->
     <div id="new">
     <p id="registration">Not Registrated?</p> <br>
     
     <div class="register">
     <button id="create-user">Create new user</button>
     </div>
+    
     <div id="dialog-form" title="Create new user">
-    </div>
-<p class="validateTips">All form fields are required.</p>
-<form>
-<fieldset>
-<label for="name">Name</label>
-<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
-<label for="email">Email</label>
-<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
-<label for="password">Password</label>
-<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
-</fieldset>
-</form>
+  <p class="validateTips">All form fields are required.</p>
+ 
+  <form>
+  <fieldset>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
+  </fieldset>
+  </form>
 </div>
-</div> 
+ 
       
-     <!----------- check login and apply new user information ----------->
+     <!--check login and apply new user information -->
      <?php  
 	  	
 	?>     
