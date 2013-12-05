@@ -6,22 +6,40 @@
 </head>
 
  <body>
+ 
  <div id="main">  
-    <h1>My Simple Blog</h1>  
-    <div id="blogPosts">  
-  <?php  
-	  	include 'blog.php';  
-	  	$blogPosts = GetBlogPosts();
-		foreach ($blogPosts as $post)  
-{  
-    echo "<div class='post'>";  
-    echo "<h1>" . $post->title . "</h1>";  
-    echo "<p>" . $post->post . "</p>";  
-    echo "<span class='footer'>Posted By: " . $post->author . " Posted On: " . $post->datePosted . " Tags: " . $post->tags . "</span>";  
-    echo "</div>";  
-}  	  	  
+   <h1>Welcome to My Simple Blog</h1>
+    
+     
+    <form name="form1" method="post" action="">
+      <p>Please Login to begin blogging!</p>
+      <p id="user"> 
+        <label for="userID">username</label>
+        <input type="text" name="userID" id="userID">
+      </p>
+      <p id="class">
+        <label>password
+          <input type="text" name="password" id="password">
+          <br>
+          <input type="submit" name="LOGIN" id="LOGIN" value="LOGIN">
+          <br>
+           <br>
+        </label>
+      </p>
+    </form>
+     
+    <div id="new">
+    <p id="registration">Not Registrated?</p> <br>
+    
+    <div class="register">
+    <a href="#">Click Here</a>
+    </div>
+    
+      
+<?php  
+	  	
 ?>     
- </div>  
+   </div>  
 </div>  
 </body>
 </html>
