@@ -11,54 +11,12 @@
 }/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
 
 /*------------ Main Style -----------*/  
-body{
-	width:85%;
-	background-color:#933;
-	padding: 30px;
-	color:#FFF;
-	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
-	font-size:1.5em;
-}
-
-h1{
-	display: block;
-	width: 400px;
-	background-color: #FFF;
-	margin:0px auto;
-	padding: 10px;
-	color: #000;
-	text-align: center;
-}
-.desc {
-	margin: 10px;
-	text-align:center;
-	font-size:0.6875em;	
-}
- 
-
-form {
-	display: block;
-	width: 300px;
-	background-color: #999;
-	font-size: 0.6875em;
-	margin:20px auto;
-	padding:10px;
-	text-align: center;
-}
-
-form p{
-	margin: 10px;
-	color:#000;
-}
-
-#new {
-	text-align:center
-}
-
-footer{
-	text-align:center;
-	margin:30px;
-	font-size: 0.6875em;
-}
-
- 
+body{width:85%;background-color:#933;padding: 30px;color:#FFF;font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;font-size:1.5em;}
+h1{display: block;width: 400px;background-color: #FFF;margin:0px auto;padding: 10px;color: #000;text-align: center;}
+.desc {margin: 10px;text-align:center;font-size:0.6875em;}
+form {display: block;width: 300px;background-color: #999;font-size: 0.6875em;margin:20px auto;padding:10px;text-align: center;}
+form p{margin: 10px;color:#000;}
+#new {text-align:center;}
+input.text { margin-bottom:12px; width:95%; padding: .4em; }
+fieldset { padding:0; border:0; margin-top:25px; }
+footer{text-align:center;margin:30px;font-size: 0.6875em;}
