@@ -22,7 +22,7 @@
         <label>password
           <input type="text" name="password" id="password">
           <br>
-          <input type="submit" name="LOGIN" id="LOGIN" value="LOGIN">
+          <input type="submit" name="LOGIN" id="LOGIN" align="right" value="LOGIN">
           <br>
            <br>
         </label>
@@ -37,9 +37,14 @@
     </div>
     
       
-<?php  
+    <p>
+      <?php  
 	  	
 ?>     
+    </p>
+    <footer>
+    <p>&copy; 2013 Jim Hatton Full Sail University BDF1312</p>
+    </footer>
    </div>  
 </div>  
 </body>
