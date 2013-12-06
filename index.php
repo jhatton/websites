@@ -12,11 +12,22 @@
  <div id="main">  
    <h1>Welcome to myBlog</h1>
 <?php  
-	$dsn="mysql:host.0.0.1;port=8889";
+	$dsn="mysql:host=127.0.0.01;port=8889;dbname=myblog";
 	$db_user="root";
 	$db_pass="root";
-	$db=new \PDO($dsn, $db_user, $db_pass);
-	  
+	$db=new PDO($dsn, $db_user, $db_pass);
+	$statement= $db->prepare("
+		SELECT first_name, last_name, email
+		FROM person 
+		WHERE (id>0)
+			AND (first_name IS NOT NULL);
+			AND (last_name IS NOT NULL);
+			AND (email IS NOT NULL);
+		ORDER BY first_name, last_name, email
+	");
+	if ($statement->execute()){
+		$rows=$statement>fetchAll(\PDO::FETCH_ASSOC);
+		}
 ?>     
     
     <footer>
