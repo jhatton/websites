@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
  <title>myBlog</title>
 </head>
 
@@ -12,12 +12,12 @@
    <h1>Welcome to myBlog</h1>
 <?php
 /* Connect to an ODBC database using an alias */
-$dsn = 'myblog';
+$dsn = 'mysql:host=127.0.0.1;dbname=myblog;port=8889';
 $user = 'root';
 $password = 'root';
 
 try {
-    $dbh = new PDO(mysql:host=127.0.0.1; $dsn, $user, $password);
+    $dbh = new PDO( $dsn, $user, $password);
 } catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
 }
@@ -30,5 +30,6 @@ try {
 </div>
 </body>
 </html>
+
    
  
