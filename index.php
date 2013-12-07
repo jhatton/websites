@@ -34,15 +34,11 @@ $statement = $dbh->prepare("
 ");
 if ($statement ->execute()){
 	$rows=$statement->fetchAll(\PDO::FETCH_ASSOC);
-	var_dump($rows);
-	foreach ($rows as $num =>$rows){
-		echo<<<__People__
-		
-	<h2>${row['first_name']}: ${row['last_name']}</h2>
-	<li>${row['email']}</li>
 	
-__PEOPLE__;	
-		}
+echo $rows; 
+		
+	
+		
 		
 	}
  
