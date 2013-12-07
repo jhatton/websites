@@ -27,9 +27,25 @@ $statement = $dbh->prepare("
 	SELECT first_name, last_name, email
 	FROM people
 	WHERE (id>0)
+		AND (first_name IS NOT NULL)
+		AND (last_name IS NOT NULL)
+		AND (email IS NOT NULL)
 	ORDER BY first_name, last_name, email
 ");
-var_dump($statement);
+if ($statement ->execute()){
+	$rows=$statement->fetchAll(\PDO::FETCH_ASSOC);
+	var_dump($rows);
+	foreach ($rows as $num =>$rows){
+		echo<<<__People__
+		
+	<h2>${row['first_name']}: ${row['last_name']}</h2>
+	<li>${row['email']}</li>
+	
+__PEOPLE__;	
+		}
+		
+	}
+ 
 
 ?>    
     <footer>
