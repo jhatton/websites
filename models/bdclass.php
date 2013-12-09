@@ -1,4 +1,5 @@
 <?php
+ 
 class db{
 	
 	private $dbh;
