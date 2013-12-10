@@ -1,17 +1,14 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Login</title>
-</head>
+<?php
 
-<body>
-<h1>Members Area</h1>
-<p>Please log in with your username and password below. </p>
-<form action="?" method="post">
-<label for="username">Username:</label>
-<input type="text" name="username" id="UserName" maxlength="20" /><br> 
-<label for="password">Password:</label>
-<input type="text" name="password" id="Password" maxlength="20" /><br> 
-<input type="submit" value="Login">
-</form>
+require_once 'login.inc';
+require_once 'controllers/dsn.php';
+require_once 'authModel.php';
+require_once 'header.inc';
+require_once 'footer.inc';
+
+$model=new authModel(DSN, USER, ROOT);
+$view= new header();
+$view = new footer();
+
+$view->show('header');
+$view->show('footer');
