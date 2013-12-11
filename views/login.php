@@ -6,7 +6,6 @@ require_once 'authModel.php';
 include_once 'authView.php';
 require_once 'header1.inc';
 require_once 'footer.inc';
-require_once 'CFDump.php';
 
 //add models
 $model=new authModel(DSN, USER, ROOT);
