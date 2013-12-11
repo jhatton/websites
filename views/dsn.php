@@ -1,9 +1,9 @@
 <?PHP
 
 // constants for server
-const DSN="mysql:host=127.0.0.1;dbname=myblog;port=8889";
-const USER="root";
-const PASS="root";
+const DSN='mysql:host=127.0.0.1;port=8889;dbname=myblog';
+const USER='root';
+const PASS='root';
 
 
-?>
+ 
