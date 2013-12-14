@@ -1,7 +1,8 @@
 <?php
-require_once "controllers/dsn.php";
-require_once "views/login.php";
+require_once "views/dsn.php";
+require_once "views/login.inc";
 require_once "pageView.php";
+ 
 
 /* Connect to an database  */
 $model= new db(DSN, USER, PASS);

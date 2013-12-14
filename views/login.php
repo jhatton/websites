@@ -1,11 +1,11 @@
 <?php
 // requires
-require_once 'views/login.inc';
-require_once 'views/dsn.php';
-require_once 'views/authModel.php';
-include_once 'views/authView.php';
-require_once 'views/header1.inc';
-require_once 'views/footer.inc';
+require_once ' login.inc';
+require_once ' dsn.php';
+require_once ' authModel.php';
+include_once ' authView.php';
+require_once ' header1.inc';
+require_once ' footer.inc';
 
 //add models
 $model=new authModel(DSN, USER, ROOT);
