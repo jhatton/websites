@@ -1,9 +1,23 @@
 <?php
+session_start();
 
 include "models/database.php";
-include "views/header.inc";
-include "views/footer.inc";
 include "models/modelView.php";
 
-$model=new dataBase(DSN, USER, PASS);
+$pageTitle ="index";
 $views=new modelView();
+$contacts=new getsModels();
+
+if ($_GET['action'] !='checklogin' && $_GET['action'] !='logout'){
+	$views->getPages("views/header.inc");
+}
+
+if (!empty($_GET['action'])){
+	if ($_GET['action'] =='home') {
+		$results=$contacts->getNames();
+		$views->getPages("views/body.php", $results);
+	}if ($_GET['action'] =='details') {
+		$results=$contacts->getOne();
+		$views->getPages("views/display.php", $results);
+	}
+}
