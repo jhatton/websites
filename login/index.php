@@ -16,8 +16,11 @@ if (!empty($_GET['action'])){
 	if ($_GET['action'] =='home') {
 		$results=$contacts->getNames();
 		$views->getPages("views/body.php", $results);
+		
 	}if ($_GET['action'] =='details') {
 		$results=$contacts->getOne();
 		$views->getPages("views/display.php", $results);
+	}if ($_GET['action'] =='login') {
+		$views->getPages("views/login.inc", $results);
 	}
 }
