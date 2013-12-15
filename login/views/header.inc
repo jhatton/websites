@@ -1,6 +1,7 @@
 <!DOCTYPE  html>
 <html>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
 <head><title>myBlog</title></head>
 <body>
 
