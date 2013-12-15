@@ -1,5 +1,6 @@
 <?php
 
-include "header.inc";
-include "footer.inc";
+include "views/header.inc";
+include "views/footer.inc";
 
+ 
