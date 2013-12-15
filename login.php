@@ -1,11 +1,5 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Login</title>
-</head>
-
-<body>
+<h1>Login Page</h1>
+<p>Please Login to Continue</p>
 
 <form action="check_username" method="post">
 <input type="text" name="username" placeholder="UserName" />
