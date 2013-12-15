@@ -22,5 +22,8 @@ if (!empty($_GET['action'])){
 		$views->getPages("views/display.php", $results);
 	}if ($_GET['action'] =='login') {
 		$views->getPages("views/login.inc", $results);
+	}if ($_GET['action'] =='checklogin') {
+		$results=$contacts->getOne();
+		$views->getPages("views/display.php", $results);
 	}
 }
