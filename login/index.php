@@ -26,4 +26,9 @@ if (!empty($_GET['action'])){
 		$results=$contacts->getOne();
 		$views->getPages("views/display.php", $results);
 	}
+}else{
+		$results=$contacts->getNames();
+		$views->getPages("views/body.php", $results);
 }
+
+$views->getPages("views/footer.inc");
