@@ -15,7 +15,7 @@ if ($_GET['action'] !='checklogin' && $_GET['action'] !='logout'){
 if (!empty($_GET['action'])){
 	if ($_GET['action'] =='home') {
 		$results=$contacts->getNames();
-		$views->getPages("views/body.php", $results);
+		$views->getPages("views/header.inc", $results);
 		
 	}if ($_GET['action'] =='details') {
 		$results=$contacts->getOne();
