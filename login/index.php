@@ -1,6 +1,6 @@
 <?php
 
-include "controllers/dsn.php";
+include "controllers/database.php";
 include "views/header.inc";
 include "views/footer.inc";
 include "models/modelView.php";
