@@ -2,7 +2,7 @@
 
 class modelView {
 
-	public function __construct() {
+	public function __constract() {
 	}
 	
 	public function getPages($pageTitle='', $data=array()){

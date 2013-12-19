@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+/Applications/MAMP/htdocs/websites/.metadata/.plugins/org.eclipse.jdt.core
+3748292980.index
+3522928430.index
+2581379378.index
+2760447997.index

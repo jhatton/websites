@@ -1,27 +1,35 @@
-<?php
-require_once "views/dsn.php";
-require_once "views/login.inc";
-require_once "pageView.php";
- 
+<?
+// my index page
+include 'models/viewModel.php';
+include 'models/contactsModel.php';
 
-/* Connect to an database  */
-$model= new db(DSN, USER, PASS);
-$view=new authView();
+$pagename='index';
 
-$username=empty($_POST['username']) ? '' : strtolower(trim($_POST['username']));
-$username=empty($_POST['password']) ? '' : trim($_POST['password']);
-$contentPage="form";
-if (!empty($username) && !empty($password)){
-	$user = $model->getUserByNamePass($username, $password);
-	$contentPage='success';
+$views=new viewModel();
+$contacts=new contactsmodel();
+
+//Show header;
+$views->getView('views/header.inc');
+
+// show the list;
+if (!empty($_GET["action"])){
+	
+	if ($_GET['action']=="home"){
+		
+		$result=$contacts->getAll();
+		$views->getView("views/body.php",$result);
+		
+	}if($_GET["action"]=="details"){
+		
+		$result=$contacts->getOne($_GET["id"]);
+		$views->getView("views/details.php", $result);
+	}
+}else{
+		$result=$contacts->getAll();
+		$views->getView("views/body.php", $result);
 }
 
-$rows=$model->getDataBase();
-$view=new pageView;
-$view->show($contentPage);
-$view->showHeader('myBlog');
-$view->showFooter();
-
-
+// footer
+$views->getView("views/footer.inc");
    
- 
+?>
