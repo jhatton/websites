@@ -1,6 +1,6 @@
 <?
 
-// protected view
+// protected page
 echo "<center>";
 foreach($data as $d){
 	echo "<b>Email:</br>";
@@ -9,7 +9,7 @@ foreach($data as $d){
 	echo $d['phone'];
 	echo "<b>Address:</br>";
 	echo $d['address'];
-	echo "<a href=''>Update</a>";
-	echo "<a href=''>Delete</a>";
+	echo "<a href='?action=update&id=".$d["id"]."'>Update</a>";
+	echo "<a href='?action=delete&id=".$d["id"]."'>Delete</a>";
 }
 echo "</center>";

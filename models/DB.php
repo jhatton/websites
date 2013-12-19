@@ -1,7 +1,7 @@
  <?
  class DB{
  	
-	public function __construct(){
+	public function _construct(){
 		// try connection to database
 		try {
 			$dsn="mysql:dbname=myblog;host=127.0.0.1";

@@ -5,7 +5,7 @@
 		public function _constract (){
 		 }	
 		 
-			public function getView($pageName="", $data=array()){
+			public function getView($pagename="", $data=array()){
 				include $pagename;
 			
 		}
