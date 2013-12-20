@@ -16,14 +16,14 @@ class dataBase {
 	
 	public function getUsers(){
 		$statment=$this->db->prepare("
-	SELECT user_name, user_password, user_fullname, user_salt
+	SELECT un, pass, first, last 
 	FROM users
-	Where (user_id>0)
-		AND (user_name is not NULL)
-		AND (user_password is not NULL)
-		AND (user_fullname is not NULL)
-		AND (user_salt is not NULL)
-	ORDER BY user_name, user_password, user_fullname, user_salt
+	Where (id>0)
+		AND (un is not NULL)
+		AND (pass is not NULL)
+		AND (first is not NULL)
+		AND (last is not NULL)
+	ORDER BY un, pass, first, last 
 ");
 try {
 	if ($statment->execute()) {

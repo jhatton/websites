@@ -16,6 +16,7 @@ $views->getView("views/header.inc");
 // show the list 
 
 if(!empty($_GET["action"])){
+	
 	if($_GET["action"]=="update"){
 		
 		$result=$contacts->getOne($_GET["id"]);
@@ -26,10 +27,12 @@ if(!empty($_GET["action"])){
 		$contacts->update($_GET["id"],$_POST['email'],$_POST['phone'],$_POST['address']);
 		$result=$contacts->getAll();
 		$views->getView("views/protected.php", $results);
+		
 	}else if($_GET['action']=='delete'){
 		$contacts->delete($_GET['id']);
 		$result=$contacts->getAll();
 		$views->getView("views/protected.php", $results);	
+		 
 	}else if($_GET['action']=='add'){
 		$views->getView("views/addform.html", $results);
 	}else if($_GET['action']=="addaction"){
