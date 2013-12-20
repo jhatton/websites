@@ -45,7 +45,7 @@ class contactsModel extends DB{
 	}
 	
 	public function update($id=0, $email="", $phone="", $address=""){
-		$sql="update people set email=:email, phone=:phone, address=:address, where id=:id ";
+		$sql="update user_details set email=:email, phone=:phone, address=:address, where id=:id ";
 		$st=$this->db->prepare($sql);
 		$st->execute(array(":id"=>$id, ":email"=>$email, ":phone"=>$phone,":address"=>$address));
 		
@@ -53,7 +53,7 @@ class contactsModel extends DB{
 	
 	public function delete($id=0){
 		
-		$sql="delete from people where id=:id";
+		$sql="delete from user_details where id=:id";
 		$st=$this->db->prepare($sql);
 		$st->execute(array(":id"=>$id));
 		
