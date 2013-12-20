@@ -22,7 +22,7 @@ if(!empty($_GET["action"])){
 		$result=$contacts->getOne($_GET["id"]);
 		$views->getView("views/updateform.html",$result);
 		
-	}else if($_GET['action']=="updateaction"){
+	}else if($_GET["'action"]=="updateaction"){
 		
 		$contacts->update($_GET["id"],$_POST['email'],$_POST['phone'],$_POST['address']);
 		$result=$contacts->getAll();
