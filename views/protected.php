@@ -3,11 +3,11 @@
 // protected page
 echo "<center>";
 foreach($data as $d){
-	echo "<b>Email:</br>";
+	echo "<b>Email:</b>";
 	echo $d['email'];
-	echo "<b>Phone:</br>";
+	echo "<b>Phone:</b>";
 	echo $d['phone'];
-	echo "<b>Address:</br>";
+	echo "<b>Address:</b>";
 	echo $d['address'];
 	echo "<a href='?action=update&id=".$d["id"]."'>Update</a>";
 	echo "<a href='?action=delete&id=".$d["id"]."'>Delete</a>";

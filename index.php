@@ -42,17 +42,18 @@ if (!empty($_GET["action"])){
 			$views->getView("views/header.inc");
 			echo "<center>Login Error</center>";
 			$view->getView("views/loginform.html");
+
 		}if ($_GET["action"]=="logout"){
 			$contacts->logout();
 			header("location: index.php");	
 		}
 			
-	}
+	
 }else{
 		$result=$contacts->getAll();
 		$views->getView("views/body.php", $result);
 }
-
+}
 // footer
 $views->getView("views/footer.inc");
    

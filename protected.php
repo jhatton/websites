@@ -35,6 +35,7 @@ if(!empty($_GET["action"])){
 		 
 	}else if($_GET['action']=='add'){
 		$views->getView("views/addform.html", $results);
+		
 	}else if($_GET['action']=="addaction"){
 		
 		$contacts->add($_POST["first"],$_POST['last'],$_POST['un'],$_POST['pass'],$_POST['email'],$_POST['phone'],$_POST['address']);

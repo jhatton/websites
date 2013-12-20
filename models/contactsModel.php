@@ -18,7 +18,7 @@ class contactsModel extends DB{
 	
 	public function getOne($id=0){
 		
-		$sql="select * from people where id=:id";
+		$sql="select * from users_details where id=:id";
 		$st=$this->db->prepare($sql);
 		$st->execute(array(":id"=>$id));
 		
@@ -33,9 +33,9 @@ class contactsModel extends DB{
 		
 		$num=$st->rowCount();
 		if ($num>0){
-			$_SESSION['loggedin']=1;
+			$_SESSION["loggedin"]=1;
 		}else{
-			$_SESSION['loggedin']=0;
+			$_SESSION["loggedin"]=0;
 		}
 			return $st->fetchAll(PDO::FETCH_COLUMN, 0);
 	}
