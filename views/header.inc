@@ -7,7 +7,7 @@
 		echo "<a href='/index.php?action=logout'>HOME</a></p>";
 		echo "<a href='/protected.php?action=protected'>HOME</a></p><a href='/protected.php?action=add'>Add a Contact</a></p>";
 	}else{
-		echo "<a href='/index.php?action=login'>LOGIN</a></p>";
+		echo "<a href='views/loginform.html?action=login'>LOGIN</a></p>";
 	}
 ?>
 </center>

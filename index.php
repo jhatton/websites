@@ -10,7 +10,7 @@ $views=new viewModel();
 $contacts=new contactsModel();
 
 //Show header;
-if (@$_GET["action"]!="checklogin" && @$_GET['action']!='logout'){
+if ($_GET["action"]!="checklogin" && $_GET["action"]!="logout"){
 	$views->getView('views/header.inc');	
 }
 
@@ -28,11 +28,11 @@ if (!empty($_GET["action"])){
 		$result=$contacts->getOne($_GET["id"]);
 		$views->getView("views/details.php", $result);
 		
-	}if($_GET['action']=='login'){
+	}if($_GET["action"]=="login"){
 		
-		$views->getView("views/details.php");
+		$views->getView("views/loginform.html");
 		
-	}if (@$_GET["action"]=="checklogin"){
+	}if ($_GET["action"]=="checklogin"){
 		
 		$result=$contacts->checklogin($_POST["un"],$_POST["pass"]);
 		

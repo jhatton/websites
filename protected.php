@@ -15,7 +15,7 @@ $views->getView("views/header.inc");
 
 // show the list 
 
-if(!empty($_GET['action'])){
+if(!empty($_GET["action"])){
 	if($_GET["action"]=="update"){
 		
 		$result=$contacts->getOne($_GET["id"]);
